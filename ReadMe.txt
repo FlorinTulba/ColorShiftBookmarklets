@@ -9,29 +9,28 @@ Here are some Chrome Extensions which produce such effects:
 - "High Contrast" https://chrome.google.com/webstore/detail/high-contrast/djcfdncoelnlbldjfhinnjlhdjlikmph )
 - "Hacker Vision" https://chrome.google.com/webstore/detail/hacker-vision/fommidcneendjonelhhhkmoekeicedej )
 
-For other browsers, there are other extensions.
+For different browsers, there are other extensions.
 
 
 I was interested in this type of transformations before the appearance of the previous solutions.
 
 At that time I've found these bookmarklets (https://www.squarefree.com/bookmarklets/color.html ) that were helpful.
 A bookmarklet is a bookmark that contains a javascript function call instead of an URL.
-When loading an unpleasant page for the eyes, just click the bookmark(let) and the colors / contrast will update
-quick enough as instructed.
+When loading an unpleasant page for the eyes, the user just clicks the bookmark(let) and not long after the colors / contrast will change as instructed.
 
 These bookmarklets work on most browsers and for web pages that don't make heavy use of images.
-For very few sites like GMail it doesn't work. Besides, some unessential regions might remain unchanged.
-Generally they perform great/excellent on more than enough sites.
+For very few sites like GMail they don't work. Besides, some unessential regions might remain unchanged.
+Generally they perform great / excellent on most sites.
 
 
 The transformation I've implemented (by adapting the bookmarklets mentioned above) shifts colors as follows:
-* sets a target background color (RRGGBB in hex format) [hardcoded to 'AAAB8A' or chosen - use http://colorpickernow.com/ for that]
+* sets a target background color (RRGGBB hex format)
 * determines the target foreground color (compared to the target background color: same hue, saturation, but complementary luminance)
 * moves any background/foreground colors towards the corresponding target at 80% from the distance between the initial color and the target
 
 The result is that the colors migrate proportionally towards their imposed targets while maintaining a glimpse of the designer's vision.
 
-The bookmarklet comes in 2 flavors:
+The implemented bookmarklet comes in 2 flavors:
 - the first one uses the target background AAAB8A (moderately light gray),
 - while the second one prompts for a target background color.
 
